@@ -9,6 +9,7 @@ export function useFetch(url) {
     setData(json)
   }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {fetchData()}, [url])
 
   return data

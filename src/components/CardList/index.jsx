@@ -1,12 +1,9 @@
-import React from 'react';
-import { useFetch } from "../../hooks";
+//import { useFetch } from "../../hooks";
 import Card from '../Card';
 import './styles.css'
-
+/* 
 const CardList = () => {
-
    const data = useFetch("https://jsonplaceholder.typicode.com/users");
-
 
   if (!data) {
     return <div>Loading...</div>
@@ -21,6 +18,14 @@ const CardList = () => {
       </div>
     );
     }
-};
+}; */
+
+const CardList = ({ monsters }) => (
+  <div className='card-list'>
+    {monsters.map((monster) => {
+      return <Card key={monster.id} monster={monster} />;
+    })}
+  </div>
+);
 
 export default CardList;
